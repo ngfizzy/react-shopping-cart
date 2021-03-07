@@ -1,0 +1,39 @@
+.cart {
+  position: fixed;
+  top: 0;
+  right: 0%;
+  background: #F2F3F0;
+  justify-content: center;
+  width: 0;
+  opacity: 0;
+  z-index: 3;
+  height: 100%;
+  overflow-x: hidden;
+  overflow: auto;
+  transition: width 0.5s ease-in-out, opacity 0.7s ease-in-out;
+  padding: 1.5rem;
+}
+
+.cart-backdrop {
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  width: 0;
+  height: 100%;
+  background: rgb(205, 209, 206);
+  backdrop-filter: blur(3px);
+  opacity: 0;
+  
+  transition: opacity 0.7s ease-in-out;
+}
+
+.cart.show {
+  width: 34.375rem;
+  opacity: 1;
+}
+
+.cart-backdrop.show {
+  width: 100vw;
+  opacity: 0.8;
+  margin-left: -1rem;
+}

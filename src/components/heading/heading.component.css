@@ -1,0 +1,14 @@
+.heading {
+  height: 15rem;
+  padding: 2rem;
+  font-weight: 600;
+}
+
+.heading-wrapper {
+  height: 100%;
+  margin-top: auto;
+  margin-bottom: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}

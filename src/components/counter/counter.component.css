@@ -1,0 +1,8 @@
+.counter {
+  width: fit-content;
+}
+
+.count {
+  display: inline-block;
+  width: 3rem;
+}

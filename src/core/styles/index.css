@@ -8,5 +8,16 @@ body {
   font-weight: 400;
   margin: 0;
   font-size: 13px;
-  background-color: #f5f5f4;
+  background-color: rgb(252, 252, 249);
+}
+
+.cta {
+  background-color: rgba(75, 85, 72, 0.857);
+  color: rgb(252, 252, 249);
+  
+}
+
+.cta:hover {
+  background-color: rgba(75, 85, 72, 1);
+  color: rgb(252, 252, 249);
 }

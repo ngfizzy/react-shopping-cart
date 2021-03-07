@@ -1,0 +1,26 @@
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 75% !important;
+  margin: auto;
+}
+
+
+
+.product img {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+.product button {
+  display: inline-block;
+  width: 100%;
+  width: 100%;
+}
+
+.heading-row {
+  background-color: #fff;
+}
