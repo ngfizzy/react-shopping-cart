@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { Col, Row } from "react-bootstrap";
 
-import './heading.component.css'
+import "./heading.component.css"
 
 export const Heading:FC<{title: string; subtitle: string;}> = ({title, subtitle}) => {
   return(

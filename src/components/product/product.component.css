@@ -8,19 +8,24 @@
 }
 
 
-
 .product img {
   display: inline-block;
   width: 100%;
+  height: 9rem;
+  max-width: 12rem;
   margin-bottom: 3rem;
 }
 
 .product button {
   display: inline-block;
   width: 100%;
-  width: 100%;
+  max-width: 80%
 }
 
 .heading-row {
   background-color: #fff;
+}
+
+.product-info {
+  margin-top: 6rem
 }

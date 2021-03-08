@@ -1,22 +1,30 @@
 import { FC } from "react";
 import { Col, Image } from "react-bootstrap";
+import { IProduct } from "../../core/interfaces";
 
-import './product.component.css';
+import "./product.component.css";
 
-export const Product:FC<{ onClick: (...arg: any[]) => any;}> = ({onClick}) => {
+
+interface ProductProps { 
+  onAddToCart: (product: IProduct) => any;
+  product: IProduct;
+  currency: string;
+}
+
+export const Product:FC<ProductProps> = ({onAddToCart, product, currency}) => {
   
   return (
-    <Col  sm={6} md={4} className="mb-5">
-      <div className="mx-center w-100 product">
+    <Col  sm={6} md={4} className="mb-5 p-2">
+      <div className="mx-center w-100 h-100 product">
         <Image
-          src="https://images.all-free-download.com/images/graphicthumb/hd_picture_of_the_beautiful_natural_scenery_03_166249.jpg"
+          src={product.image_url}
           rounded 
         />
-        <div>
-          <h4>Amazing Product</h4>
-          <h6>From: $8000</h6>
+        <div className="text-center product-info">
+          <h4>{product.title}</h4>
+          <h6>From: {currency} {product.price}</h6>
         </div>
-          <button className="px-5 py-3 border-0 cta" onClick={() => onClick()}>Add to Cart</button>
+          <button className="px-2 py-3 border-0 cta" onClick={() => onAddToCart(product)}>Add to Cart</button>
       </div>
     </Col>
   );

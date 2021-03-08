@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-import './lumin-nav.component.css'
+import "./lumin-nav.component.css"
 
 export const LuminNav: FC = () => (
   <div className="p-2 bg-light border-bottom">

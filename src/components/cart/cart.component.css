@@ -1,5 +1,6 @@
 .cart {
   position: fixed;
+  display:  block;
   top: 0;
   right: 0%;
   background: #F2F3F0;
@@ -36,4 +37,25 @@
   width: 100vw;
   opacity: 0.8;
   margin-left: -1rem;
+}
+
+
+.cart-hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.cart-wrapper {
+  height: 85%
+}
+
+.cart-sub {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.sub-value {
+  font-size: 1.2rem;
+  font-weight: 400;
 }

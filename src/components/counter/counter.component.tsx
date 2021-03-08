@@ -1,27 +1,28 @@
-import React, { FC, useEffect, useState } from 'react';
-import { Button } from 'react-bootstrap';
+import { FC } from "react";
+import { Button } from "react-bootstrap";
+import { ICartItem } from "../../core/interfaces";
 
-import './counter.component.css';
+import "./counter.component.css";
 
 interface CounterProps {
-  onChange?: (count: number) => void;
+  item: ICartItem;
+  onChange?: (item: ICartItem, operator: "+" | "-") => void;
 }
 
-export const Counter:FC<CounterProps> = ({onChange}) => {
-  const [count, setCount] = useState(1);
-
-  const increment = () => setCount((count  + 1));
-  const decrement = () => setCount((count > 1 ? count - 1: 1));
-
-  useEffect(() => {
-    onChange && onChange(count);
-  }, [count, onChange]);
-
+export const Counter:FC<CounterProps> = ({ item,  onChange}) => {
   return (
-    <div className="counter bg-light">
-      <Button className="p-2" variant="light" onClick={decrement}>-</Button>
-      <span className="p-1  text-center count">{count}</span>
-      <Button className="p-2" variant="light" onClick={increment}>+</Button>
+    <div className="counter bg-light border border-dark">
+      <Button 
+        className="p-2" variant="light"
+        onClick={() => onChange && onChange(item, "-")}
+      >
+        -
+      </Button>
+      <span className="p-1  text-center count">{item.count}</span>
+      <Button className="p-2" variant="light" onClick={() => onChange && onChange(item, "+")}>
+        +
+      </Button>
     </div>
   );
-}
+};
+
